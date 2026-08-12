@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../img/k0s-favicon-192.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -862,6 +862,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../version-skew-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Version skew policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../backup/" class="md-nav__link">
         
   
@@ -926,6 +954,34 @@
     
   
     Reset (Uninstall)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../directories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directories
   
 
     
@@ -2636,6 +2692,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../governance/cncf/ai-conformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes AI conformance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../governance/cncf/gtr/" class="md-nav__link">
         
   
@@ -3063,6 +3147,11 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 <h2 id="configuration-options">Configuration options<a class="headerlink" href="#configuration-options" title="Permanent link">#</a></h2>
 <p>The configuration object is a 1-to-1 mapping with the existing <a href="../configuration/">configuration YAML</a>. All the configuration options EXCEPT options under <code>spec.api</code> and <code>spec.storage</code> are dynamically reconciled.</p>
 <p>As with any Kubernetes cluster there are certain things that just cannot be changed on-the-fly, this is the list of non-changeable options:</p>
+<!--
+Technically, k0s currently supports reconciling the pod CIDR from dynamic
+config. This has supposedly been an oversight during implementation. Actually
+attempting to change it on a live cluster would likely wreak havoc.
+-->
 <ul>
 <li><code>network.podCIDR</code></li>
 <li><code>network.serviceCIDR</code></li>
@@ -3187,7 +3276,7 @@ initialized. Both k0sctl and k0smotron handle this without user intervention.</p
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.autohide", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

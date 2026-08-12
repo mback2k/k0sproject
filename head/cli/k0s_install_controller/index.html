@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../img/k0s-favicon-192.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -858,6 +858,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../version-skew-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Version skew policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../backup/" class="md-nav__link">
         
   
@@ -922,6 +950,34 @@
     
   
     Reset (Uninstall)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../directories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directories
   
 
     
@@ -2517,6 +2573,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../governance/cncf/ai-conformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes AI conformance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../governance/cncf/gtr/" class="md-nav__link">
         
   
@@ -2917,10 +3001,11 @@ With the controller subcommand you can setup a single node cluster by running:
     k0s install controller --single
 </code></pre></div>
 <h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>  -c, --config string                                  config file, use &#39;-&#39; to read the config from stdin (default &quot;/etc/k0s/k0s.yaml&quot;)
+<div class="highlight"><pre><span></span><code>      --api-server-stop-timeout duration               time to wait for the API server to stop
+  -c, --config string                                  config file, use &#39;-&#39; to read the config from stdin (default &quot;/etc/k0s/k0s.yaml&quot;)
       --cri-socket string                              container runtime socket to use, default to internal containerd. Format: [remote|docker]:[path-to-socket]
       --data-dir string                                Data Directory for k0s. DO NOT CHANGE for an existing setup, things will break! (default &quot;/var/lib/k0s&quot;)
-      --disable-components strings                     disable components (valid items: applier-manager,autopilot,control-api,coredns,csr-approver,endpoint-reconciler,helm,konnectivity-server,kube-controller-manager,kube-proxy,kube-scheduler,metrics-server,network-provider,node-role,system-rbac,update-prober,windows-node,worker-config)
+      --disable-components strings                     disable components (valid items: applier-manager,autopilot,control-api,coredns,csr-approver,endpoint-reconciler,helm,konnectivity-server,kube-controller-manager,kube-proxy,kube-scheduler,metrics-server,network-provider,node-role,system-rbac,update-prober,windows-node)
       --enable-cloud-provider                          Whether or not to enable cloud provider support in kubelet
       --enable-dynamic-config                          enable cluster-wide dynamic config based on custom resource
       --enable-k0s-cloud-provider                      enables the k0s-cloud-provider (default false)
@@ -2928,6 +3013,7 @@ With the controller subcommand you can setup a single node cluster by running:
       --enable-worker                                  enable worker (default false)
       --feature-gates mapStringBool                    feature gates to enable (comma separated list of key=value pairs)
   -h, --help                                           help for controller
+      --ignore-pre-flight-checks                       continue even if pre-flight checks fail
       --init-only                                      only initialize controller and exit
       --iptables-mode string                           iptables mode (valid values: nft, legacy, auto). default: auto
       --k0s-cloud-provider-port int                    the port that k0s-cloud-provider binds on (default 10258)
@@ -2947,8 +3033,9 @@ With the controller subcommand you can setup a single node cluster by running:
 <h3 id="options-inherited-from-parent-commands">Options inherited from parent commands<a class="headerlink" href="#options-inherited-from-parent-commands" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code>  -d, --debug                  Debug logging (implies verbose logging)
       --debugListenOn string   Http listenOn for Debug pprof handler (default &quot;:6060&quot;)
-  -e, --env stringArray        set environment variable
-      --force                  force init script creation
+  -e, --env stringArray        Set environment variables (&lt;name&gt;=&lt;value&gt; or just &lt;name&gt;)
+      --force                  Force init script creation
+      --start                  Start the service immediately after installation
   -v, --verbose                Verbose logging
 </code></pre></div>
 <h3 id="see-also">SEE ALSO<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
@@ -3059,7 +3146,7 @@ With the controller subcommand you can setup a single node cluster by running:
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.autohide", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

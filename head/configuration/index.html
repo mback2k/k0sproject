@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://docs.k0sproject.io/head/configuration/">
       
       
-        <link rel="prev" href="../reset/">
+        <link rel="prev" href="../directories/">
       
       
         <link rel="next" href="../dynamic-configuration/">
@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../img/k0s-favicon-192.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -862,6 +862,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../version-skew-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Version skew policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../backup/" class="md-nav__link">
         
   
@@ -926,6 +954,34 @@
     
   
     Reset (Uninstall)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../directories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directories
   
 
     
@@ -1221,6 +1277,17 @@
     <span class="md-ellipsis">
       
         spec.telemetry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-patches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Component patches
       
     </span>
   </a>
@@ -2763,6 +2830,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../governance/cncf/ai-conformance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes AI conformance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../governance/cncf/gtr/" class="md-nav__link">
         
   
@@ -3239,6 +3334,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#component-patches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Component patches
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3353,6 +3459,7 @@ k0sctl</a> and the <a href="https://github.com/k0sproject/k0sctl/blob/main/READM
 <span class="w">    </span><span class="nt">dualStack</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">kubeProxy</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">healthzBindAddress</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0.0.0:10256</span>
 <span class="w">      </span><span class="nt">iptables</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">minSyncPeriod</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0s</span>
 <span class="w">        </span><span class="nt">syncPeriod</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0s</span>
@@ -3371,6 +3478,9 @@ k0sctl</a> and the <a href="https://github.com/k0sproject/k0sctl/blob/main/READM
 <span class="w">    </span><span class="nt">nodeLocalLoadBalancing</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">      </span><span class="nt">envoyProxy</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">apiServerBindPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7443</span>
+<span class="w">        </span><span class="nt">konnectivityServerBindPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7132</span>
+<span class="w">      </span><span class="nt">traefik</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">apiServerBindPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7443</span>
 <span class="w">        </span><span class="nt">konnectivityServerBindPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7132</span>
 <span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EnvoyProxy</span>
@@ -3432,7 +3542,7 @@ k0sctl</a> and the <a href="https://github.com/k0sproject/k0sctl/blob/main/READM
 </tr>
 <tr>
 <td><code>port</code>¹</td>
-<td>Custom port for the Kubernetes API server to listen on (default: 6443)</td>
+<td>Custom port for the Kubernetes API server to listen on (default: 6443). When set to a privileged port (&lt; 1024), k0s automatically grants the <code>CAP_NET_BIND_SERVICE</code> capability to the kube-apiserver process to allow binding to the port.</td>
 </tr>
 <tr>
 <td><code>k0sApiPort</code>¹</td>
@@ -3460,7 +3570,7 @@ k0sctl</a> and the <a href="https://github.com/k0sproject/k0sctl/blob/main/READM
 </tr>
 <tr>
 <td><code>etcd.extraArgs</code></td>
-<td>Map of key-values (strings) for any extra arguments to pass down to etcd process. <code>extraArgs</code> are recommeneded over <code>rawrArgs</code> if the use case allows it.  Any behavior triggered by these parameters is outside k0s support.</td>
+<td>Map of key-values (strings) for any extra arguments to pass down to etcd process. <code>extraArgs</code> are recommended over <code>rawArgs</code> if the use case allows it. Any behavior triggered by these parameters is outside k0s support.</td>
 </tr>
 <tr>
 <td><code>etcd.rawArgs</code></td>
@@ -3475,12 +3585,20 @@ k0sctl</a> and the <a href="https://github.com/k0sproject/k0sctl/blob/main/READM
 <td>The expiration duration of the server certificate (default: 8760h)</td>
 </tr>
 <tr>
+<td><code>etcd.externalCluster</code></td>
+<td>Configuration when etcd is externally managed, i.e. running on dedicated nodes. See <a href="#specstorageetcdexternalcluster"><code>spec.storage.etcd.externalCluster</code></a></td>
+</tr>
+<tr>
 <td><code>kine.dataSource</code></td>
 <td><a href="https://github.com/k3s-io/kine">kine</a> data source URL.</td>
 </tr>
 <tr>
-<td><code>etcd.externalCluster</code></td>
-<td>Configuration when etcd is externally managed, i.e. running on dedicated nodes. See <a href="#specstorageetcdexternalcluster"><code>spec.storage.etcd.externalCluster</code></a></td>
+<td><code>kine.extraArgs</code></td>
+<td>Map of key-values (strings) for any extra arguments to pass down to kine process. <code>extraArgs</code> are recommended over <code>rawArgs</code> if the use case allows it.  Any behavior triggered by these parameters is outside k0s support.</td>
+</tr>
+<tr>
+<td><code>kine.rawArgs</code></td>
+<td>Slice of strings for any raw arguments to pass down to the kine process. These are appended after <code>extraArgs</code>. Any behavior triggered by these parameters is outside k0s support. (default: empty)</td>
 </tr>
 </tbody>
 </table>
@@ -3691,7 +3809,7 @@ CALICO_IPV6POOL_CIDR:<span class="w"> </span><span class="s2">&quot;{{ spec.netw
 </tr>
 <tr>
 <td><code>mode</code></td>
-<td>Kube proxy operating mode, supported modes <code>iptables</code>, <code>ipvs</code>, <code>nftables</code>, <code>userspace</code> (default: <code>iptables</code>)</td>
+<td>Kube proxy operating mode, supported modes <code>iptables</code>, <code>ipvs</code>, <code>nftables</code>¹, <code>userspace</code> (default: <code>iptables</code>)</td>
 </tr>
 <tr>
 <td><code>iptables</code></td>
@@ -3710,6 +3828,14 @@ CALICO_IPV6POOL_CIDR:<span class="w"> </span><span class="s2">&quot;{{ spec.netw
 <td>Kube proxy <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/">nodePortAddresses</a></td>
 </tr>
 <tr>
+<td><code>healthzBindAddress</code></td>
+<td>Kube proxy <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/">healthzBindAddress</a> (default: 0.0.0.0:10256)</td>
+</tr>
+<tr>
+<td><code>metricsBindAddress</code></td>
+<td>Kube proxy <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/">metricsBindAddress</a> (default: 0.0.0.0:10249)</td>
+</tr>
+<tr>
 <td><code>extraArgs</code></td>
 <td>Map of key-values (strings) for any extra arguments to pass down to kube-proxy process. <code>extraArgs</code> are recommended over <code>rawArgs</code> if the use case allows it. Any behavior triggered by these parameters is outside k0s support. (default: empty)</td>
 </tr>
@@ -3719,6 +3845,11 @@ CALICO_IPV6POOL_CIDR:<span class="w"> </span><span class="s2">&quot;{{ spec.netw
 </tr>
 </tbody>
 </table>
+<p>¹ For nftables, the kube-proxy container's nftables version needs to be less
+than or equal to the host OS's in order to avoid segmentation faults. For
+example, a host OS with nftables v1.1.1 requires
+<code>quay.io/k0sproject/kube-proxy:v1.33.2</code> or
+lower.</p>
 <p>Default kube-proxy iptables settings:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">iptables</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">masqueradeAll</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
@@ -3760,18 +3891,23 @@ CALICO_IPV6POOL_CIDR:<span class="w"> </span><span class="s2">&quot;{{ spec.netw
 </tr>
 <tr>
 <td><code>type</code></td>
-<td>The type of the node-local load balancer to deploy on worker nodes. Default: <code>EnvoyProxy</code>. (This is the only option for now.)</td>
+<td>The type of the node-local load balancer to deploy on worker nodes. Default: <code>EnvoyProxy</code>. Supported values: <code>EnvoyProxy</code>, <code>Traefik</code>.</td>
 </tr>
 <tr>
 <td><code>envoyProxy</code></td>
 <td>Configuration options related to the "EnvoyProxy" type of load balancing.</td>
+</tr>
+<tr>
+<td><code>traefik</code></td>
+<td>Configuration options related to the "Traefik" type of load balancing.</td>
 </tr>
 </tbody>
 </table>
 <h5 id="specnetworknodelocalloadbalancingenvoyproxy"><code>spec.network.nodeLocalLoadBalancing.envoyProxy</code><a class="headerlink" href="#specnetworknodelocalloadbalancingenvoyproxy" title="Permanent link">#</a></h5>
 <p>Configuration options required for using Envoy as the backing implementation for
 node-local load balancing.</p>
-<p><strong>Note:</strong> This type of load balancing is not supported on ARMv7 workers.</p>
+<p><strong>Note:</strong> This type of load balancing is not supported on ARMv7, RISC-V and
+Windows.</p>
 <table>
 <thead>
 <tr>
@@ -3795,6 +3931,35 @@ node-local load balancing.</p>
 <tr>
 <td><code>konnectivityServerBindPort</code></td>
 <td>Port number on which to bind the Envoy load balancer for the konnectivity server to on a worker's loopback interface. Default: <code>7132</code>.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="specnetworknodelocalloadbalancingtraefik"><code>spec.network.nodeLocalLoadBalancing.traefik</code><a class="headerlink" href="#specnetworknodelocalloadbalancingtraefik" title="Permanent link">#</a></h5>
+<p>Configuration options required for using Traefik as the backing implementation
+for node-local load balancing.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>image</code></td>
+<td>The OCI image that's being used for the Traefik Pod.</td>
+</tr>
+<tr>
+<td><code>imagePullPolicy</code></td>
+<td>The pull policy being used used for the Traefik Pod. Defaults to <code>spec.images.default_pull_policy</code> if omitted.</td>
+</tr>
+<tr>
+<td><code>apiServerBindPort</code></td>
+<td>Port number on which to bind the Traefik load balancer for the Kubernetes API server to on a worker's loopback interface. Default: <code>7443</code>.</td>
+</tr>
+<tr>
+<td><code>konnectivityServerBindPort</code></td>
+<td>Port number on which to bind the Traefik load balancer for the konnectivity server to on a worker's loopback interface. Default: <code>7132</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -4080,7 +4245,7 @@ by k0s.</p>
 <span class="w">  </span><span class="nt">images</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">coredns</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quay.io/k0sproject/coredns</span>
-<span class="w">      </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.14.1</span>
+<span class="w">      </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.14.6-k0s.0</span>
 </code></pre></div>
 <p>If you want the list of default images and their versions to be included, use <code>k0s config create --include-images</code>.</p>
 <h4 id="available-keys">Available keys<a class="headerlink" href="#available-keys" title="Permanent link">#</a></h4>
@@ -4106,14 +4271,14 @@ by k0s.</p>
 <span class="w">  </span><span class="nt">calico</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">kubecontrollers</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">repo.acme.corp/k0sproject/calico-kube-controllers</span>
-<span class="w">      </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v3.31.3-0</span>
+<span class="w">      </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v3.32.1-2</span>
 <span class="w">  </span><span class="nt">metricsserver</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">repo.acme.corp/k0sproject/metrics-server</span>
-<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v0.8.1-0</span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v0.9.0-k0s.0</span>
 </code></pre></div>
 <p>In the runtime the image names are calculated as
-<code>airgap-repo.local/k0sproject/calico-kube-controllers:v3.31.3-0</code> and
-<code>airgap-repo.local/k0sproject/metrics-server:v0.8.1-0</code>. This only
+<code>airgap-repo.local/k0sproject/calico-kube-controllers:v3.32.1-2</code> and
+<code>airgap-repo.local/k0sproject/metrics-server:v0.9.0-k0s.0</code>. This only
 affects the image pull location, and thus omitting an image specification here
 will not disable component deployment.</p>
 <h3 id="specextensionshelm"><code>spec.extensions.helm</code><a class="headerlink" href="#specextensionshelm" title="Permanent link">#</a></h3>
@@ -4131,12 +4296,109 @@ will not disable component deployment.</p>
 <span class="w">  </span><span class="nt">telemetry</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
+<h3 id="component-patches">Component patches<a class="headerlink" href="#component-patches" title="Permanent link">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Experimental feature</p>
+<p>Patching is an experimental feature, which means the behavior of this feature might be unstable and may change without a major version bump.</p>
+</div>
+<p>Several k0s-managed components let you customize the Kubernetes resources they
+generate before those resources are written and applied. This is an escape
+hatch for adjustments k0s does not expose as dedicated config options. Patches
+live under the component they belong to:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Config key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CoreDNS</td>
+<td><code>spec.network.coreDNS.patches</code></td>
+</tr>
+<tr>
+<td>kube-proxy</td>
+<td><code>spec.network.kubeProxy.patches</code></td>
+</tr>
+<tr>
+<td>kube-router</td>
+<td><code>spec.network.kuberouter.patches</code></td>
+</tr>
+<tr>
+<td>Calico</td>
+<td><code>spec.network.calico.patches</code></td>
+</tr>
+<tr>
+<td>metrics-server</td>
+<td><code>spec.metricsServer.patches</code></td>
+</tr>
+</tbody>
+</table>
+<p>Each entry selects a target resource by <code>kind</code> and <code>name</code> (optionally narrowed
+by <code>namespace</code>) and provides the patch <code>type</code> and <code>content</code>. The <code>content</code> may
+be written as JSON or YAML.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>target.kind</code></td>
+<td>The Kubernetes <code>kind</code> of the generated resource to patch (e.g. <code>Deployment</code>, <code>Service</code>, <code>ConfigMap</code>).</td>
+</tr>
+<tr>
+<td><code>target.name</code></td>
+<td>The <code>metadata.name</code> of the generated resource to patch.</td>
+</tr>
+<tr>
+<td><code>target.namespace</code></td>
+<td>Optional. Narrows the match to a single namespace.</td>
+</tr>
+<tr>
+<td><code>patch.type</code></td>
+<td>One of <code>JSON</code> (RFC 6902 JSON Patch), <code>MergePatch</code> (RFC 7386 JSON Merge Patch) or <code>StrategicMergePatch</code>.</td>
+</tr>
+<tr>
+<td><code>patch.content</code></td>
+<td>The patch body, as JSON or YAML.</td>
+</tr>
+</tbody>
+</table>
+<p>Multiple patches matching the same resource are applied in the order listed.
+Note that <code>StrategicMergePatch</code> patches are only supported for built-in
+Kubernetes resource kinds.</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">network</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">coreDNS</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">patches</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">target</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">coredns</span>
+<span class="w">            </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kube-system</span>
+<span class="w">          </span><span class="nt">patch</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StrategicMergePatch</span>
+<span class="w">            </span><span class="nt">content</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">              </span><span class="no">spec:</span>
+<span class="w">                </span><span class="no">replicas: 3</span>
+<span class="w">                </span><span class="no">template:</span>
+<span class="w">                  </span><span class="no">spec:</span>
+<span class="w">                    </span><span class="no">containers:</span>
+<span class="w">                      </span><span class="no">- name: coredns</span>
+<span class="w">                        </span><span class="no">resources:</span>
+<span class="w">                          </span><span class="no">limits:</span>
+<span class="w">                            </span><span class="no">memory: 256Mi</span>
+</code></pre></div>
 <h2 id="disabling-controller-components">Disabling controller components<a class="headerlink" href="#disabling-controller-components" title="Permanent link">#</a></h2>
 <p>k0s allows to completely disable some of the system components. This allows
 users to build a minimal Kubernetes control plane and use what ever components
 they need to fulfill their need for the control plane. Disabling the system
 components happens through a command line flag for the controller process:</p>
-<div class="highlight"><pre><span></span><code>--disable-components strings                     disable components (valid items: applier-manager,autopilot,control-api,coredns,csr-approver,endpoint-reconciler,helm,konnectivity-server,kube-controller-manager,kube-proxy,kube-scheduler,metrics-server,network-provider,node-role,system-rbac,update-prober,windows-node,worker-config)
+<div class="highlight"><pre><span></span><code>--disable-components strings                     disable components (valid items: applier-manager,autopilot,control-api,coredns,csr-approver,endpoint-reconciler,helm,konnectivity-server,kube-controller-manager,kube-proxy,kube-scheduler,metrics-server,network-provider,node-role,system-rbac,update-prober,windows-node)
 </code></pre></div>
 <p>If you use k0sctl, just add the flag when installing the cluster for the first
 controller at <code>spec.hosts.installFlags</code> in the config file like e.g.:</p>
@@ -4265,7 +4527,7 @@ DaemonSets.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.autohide", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
